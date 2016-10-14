@@ -70,7 +70,6 @@ func playAlertSound(sound: String, type: String) {
         AudioServicesCreateSystemSoundID(soundUrl, &soundID)
         // 播放声音
         AudioServicesPlaySystemSound(soundID)
-        
         // 播放完成回调
          let pointer = Unmanaged.passUnretained(self).toOpaque()
         AudioServicesAddSystemSoundCompletion(soundID, nil, nil, { (soundID, pointer) in
