@@ -56,6 +56,7 @@ AudioServicesPlaySystemSound(soundID)
 
 ##### (4)防止出现重复点击声音覆盖
 > 通常我们会在上一个声音播放完成之后才会调用下一次播放这里就会用到完成的回调方法 AudioServicesAddSystemSoundCompletion
+
 例:
 ```
 func playAlertSound(sound: String, type: String) {
